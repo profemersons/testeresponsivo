@@ -10,6 +10,7 @@
 }
 html{
     font-size: 62.5%;
+    scroll-padding-top: 80px;
 }
 body{
     width: 100%;
@@ -265,4 +266,31 @@ span{
     #menu-toggle:checked ~ nav {
         display: block;
     }
+}
+
+
+.blocos h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #3d5ca6;
+    padding-left: 1.5rem;
+    color: #3d5ca6;
+}
+
+section p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    
+}
+
+#contato a {
+    color: #3d5ca6;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+#contato a:hover {
+    color: white;
+    text-decoration: underline;
 }
