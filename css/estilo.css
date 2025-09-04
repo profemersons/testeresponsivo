@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 html{
     font-size: 62.5%;
@@ -22,12 +23,12 @@ body{
 header{
     margin-top: 20px;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
+    display: flex;
     background-color: transparent;
-    display:flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
@@ -40,23 +41,25 @@ header{
     transition: 0.5s ease;
 }
 .logo:hover{
-    transform: scale(1.1);
+    transform:scale(1.1)
 }
 nav a{
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
-    font-weight: 500;
+    font-weight: 400;
     transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 nav a:hover,
 nav a.active{
-    color:#3d5ca6;
+    color: #3d5ca6;
     border-bottom: 3px solid #3d5ca6 ;
-} 
+}
+
 section{
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    padding: 5rem 9% 5rem; 
 }
 .home{
     display: flex;
@@ -74,50 +77,51 @@ span{
     color:#3d5ca6;
 }
 .home-content h3{
-    font-size:3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
 }
 .home-content p{
     font-size: 1.6rem;
 }
 .home-img img{
     position: relative;
-    width: 60vh;
+    width: 64vh;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
 }
 .home-img img:hover{
     transform: scale(1.1);
 }
-.social-icons a{
+.home .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color:transparent;
     font-size: 2rem;
+    background-color: transparent;
     border: 0.2rem solid #3d5ca6;
     border-radius: 50%;
-    color:#3d5ca6;
     margin: 3rem 1.5rem 3rem 0;
+    width: 4rem;
+    height: 4rem;
+    color:#3d5ca6;
     transition: 0.3s ease;
 }
 .social-icons a:hover{
     color: black;
-    background-color: #3d5ca6;
     transform: scale(1.3) translateY(-5px);
+    background-color: #3d5ca6;
     box-shadow: 0 0 25px #3d5ca6;
 }
 .btn{
     display: inline-block;
-    padding: 1rem 2.8rem;
-    background-color: transparent;
+    padding: 1rem 2rem;
+    background-color: black;
+    border: 0.2rem solid #3d5ca6;
     border-radius: 4rem;
-    border: 2px solid #3d5ca6;  
     font-size: 1.6rem;
     color:#3d5ca6;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
     transition: 0.3s ease;
     cursor: pointer;
 }
@@ -137,55 +141,52 @@ span{
 }
 .typing-text span::before{
     content: "";
-    color:#3d5ca6;
+    color: #3d5ca6;
     animation: words 20s infinite;
 }
 .typing-text span::after{
     content: "";
-    background-color: black;
+    background-color: transparent;
     position: absolute;
-    width: calc(100% + 8px);
+    width: calc(100%+8px);
     height: 100%;
     border-left: 3px solid black;
     animation: cursor 0.6s infinite;
 }
-@keyframes cursor {
+@keyframes cursor{
     to{
         border-left: 3px solid #3d5ca6;
     }
 }
-
 @keyframes words{
     0%, 20%{
         content: "Professor";
     }
     21%, 40%{
-        content: "Pai de pet";
+        content: "Téc. de Info";
     }
     41%, 60%{
-        content: "Téc. de info";
+        content: "Mestre Pokémon";
     }
     61%, 80%{
-        content: "Mestre Pokémon";
+        content: "Pai de pet";
     }
     81%, 100%{
         content: "Aquariano";
     }
 }
-
-@media(max-width:995px){
+@media(max-width: 995px){
     nav{
         position: absolute;
         display: none;
         top: 0;
         right: 0;
-        width: 40%;
         border-left: 3px solid #3d5ca6;
         border-bottom: 3px solid #3d5ca6;
         border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        padding: 1rem;
         background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-top: 0.1rem solid #3d5ca6;
     }
 
     nav.active{
@@ -197,100 +198,72 @@ span{
         font-size: 2rem;
         margin: 3rem 0;
     }
-
     nav a:hover,
     nav a.active{
         padding: 1rem;
-        border-radius: 0.5rem;
         border-bottom: 0.5rem solid #3d5ca6;
-    }
+    }    
 }
-
-
 @media (max-width: 1000px){
     .home{
-        gap: 4rem;
+        gap:4rem;
     }
 }
-
-@media(max-width:995px){
+@media (max-width: 995px){
     .home{
         flex-direction: column;
         margin: 5rem 4rem;
     }
-
     .home .home-content h3{
         font-size: 2.5rem;
     }
-
     .home-content h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
-
     .home-img img{
-        width: 70vw;
+        width: 70vh;
         margin-top: 4rem;
     }
 }
-
-/* Oculta o checkbox */
-.menu-toggle {
+/*Ocultar o checkbox*/
+.menu-toggle{
     display: none;
 }
-
-/* Ícone do menu hamburguer */
-.menu-icon {
+/*Icone do menu de hamburguer*/
+.menu-icon{
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 22px;
-    cursor: pointer;
+    cursor:pointer;
     z-index: 101;
 }
-
-.menu-icon span {
+.menu-icon span{
     display: block;
     height: 4px;
     background-color: #3d5ca6;
     border-radius: 2px;
 }
-
-/* Exibe o menu hamburguer em telas menores */
-@media (max-width: 995px) {
-    .menu-icon {
+/*Exibe o menu hamburguer em telas menores*/
+@media(max-width: 995px){
+    .menu-icon{
         display: flex;
     }
-
-    /* Mostra o menu quando o checkbox está checado */
-    #menu-toggle:checked ~ nav {
+    #menu-toggle:checked ~ nav{
         display: block;
     }
 }
 
-
-.blocos h3 {
+.blocos h3{
     font-size: 3rem;
     margin-bottom: 2rem;
     border-left: 5px solid #3d5ca6;
     padding-left: 1.5rem;
-    color: #3d5ca6;
+    color:#3d5ca6
 }
-
-section p {
+.blocos p{
     font-size: 1.8rem;
     line-height: 1.7;
-    color: #e0e0e0;
-    
-}
-
-#contato a {
-    color: #3d5ca6;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
-
-#contato a:hover {
-    color: white;
-    text-decoration: underline;
+    color:white;
 }
